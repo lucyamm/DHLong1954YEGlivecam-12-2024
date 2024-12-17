@@ -70,41 +70,49 @@
     <div id="response"></div>
 
     <script>
-        const responses = [
+        let responses = [
             "Status Report: Doug is debugging his appetite with butter tarts. Results: promising, sweet, and sticky.",
             "Status Report: Liver failure: the free version of Ozempic. Doug does not recommend it.",
-            "Status Report: Doug visualized heli skiing straight from the ICU to a perfect Canadian powder day.",
             "Status Report: Doug’s hallway laps feel like backcountry splitboard treks—slow climbs, big rewards.",
-            "Status Report: Doug’s staples are holding tighter than a pipeline weld during a pressure test.",
-            "Status Report: Doug remembers mashed potatoes as better in 'the vague years.' This memory may be unreliable.",
-            "Status Report: Doug’s liver: 100% schistosomiasis-free, 100% ready for its butter tart debut.",
-            "Status Report: Doug’s dry mouth is lobbying for ice cream reparations. Haagen-Dazs Vanilla Bean is on standby.",
-            "Status Report: Doug just filed spaghetti under ‘failure modes in engineering projects.’",
-            "Status Report: Doug dreams of cat skiing through powder. Hospital mashed potatoes have the same consistency.",
-            "Status Report: Doug submitted a formal complaint: diuretics have no pause button. Review in progress.",
-            "Status Report: Doug is mentally heli skiing over the Rockies, powered by butter tart carb-loading.",
-            "Status Report: Doug’s old liver got taken out by schistosomiasis, but the new one has a first-class ticket to recovery.",
-            "Status Report: Doug calculated hallway laps as 50% cardio, 50% dry mouth endurance training.",
-            "Status Report: Doug’s university days (a.k.a. 'the vague years') taught him one thing: naps are essential recovery tools.",
-            "Status Report: Doug is designing a butter tart pipeline. Pepper will supervise quality control.",
-            "Status Report: Doug’s liver has officially been declared ‘MVP of Recovery.’ Old liver: disqualified by parasites.",
-            "Status Report: Doug’s taste buds still hate spaghetti. Butter tarts remain their gold standard.",
-            "Status Report: Doug is inspecting mashed potatoes for tensile strength. Results suggest 'breaks under emotional stress.'",
-            "Status Report: Doug’s dry mouth makes hydration feel like a full-time job with overtime shifts.",
-            "Status Report: Doug survived ‘the vague years,’ schistosomiasis, and hospital spaghetti. Final boss: pudding.",
-            "Status Report: Doug’s mental map now includes splitboard ascents, cat ski drops, and pudding detours.",
-            "Status Report: Doug’s energy today: low on spaghetti tolerance, high on butter tart optimism.",
-            "Status Report: Doug’s engineering brain kicked in when he considered reinforcing pudding cups for transport efficiency.",
-            "Status Report: Doug’s dry mouth remains undefeated, but ice cream diplomacy talks are underway.",
-            "Status Report: Doug ranked hallway walking as harder than a backcountry skin track. At least the views are the same.",
-            "Status Report: Doug’s liver is younger, faster, and healthier. Schistosomiasis is still the villain in its backstory.",
-            "Status Report: Doug plans to celebrate recovery with Pepper, a helicopter drop, and endless fresh powder."
+            "Status Report: Doug feels like the last cowboy at the Calgary Stampede: tired, slightly queasy, but still standing.",
+            "Status Report: Doug’s liver recovery has the stamina of someone surviving Stampede breakfasts and late-night rodeos.",
+            "Status Report: Doug says he feels like Stampede Sunday: everything hurts, but he’s proud of making it through.",
+            "Status Report: Doug’s energy today: less cowboy bull riding, more post-Stampede nap in the shade.",
+            "Status Report: Doug ranked his dry mouth as Stampede-level dehydration after a pancake breakfast marathon.",
+            "Status Report: Doug’s old liver put in 30 years of rodeo, and schistosomiasis finally bucked it off.",
+            "Status Report: Doug says his liver is recovering better than most people do after Stampede beer gardens.",
+            "Status Report: Doug’s appetite declared butter tarts the cure for all post-Stampede fatigue. Spaghetti remains banned.",
+            "Status Report: Doug dreams of cat skiing through pristine powder—anything to escape Stampede flashbacks.",
+            "Status Report: Doug’s hallway walks are slower than a cowboy leaving the Stampede after 10 days of rodeo life.",
+            "Status Report: Doug’s liver is now officially healthier than the guy who rode the mechanical bull too many times.",
+            "Status Report: Doug remembers Stampede Sundays fondly: tired, sore, but still celebrating the wins—just like recovery.",
+            "Status Report: Doug is feeling stapled together, like the cowboy whose chaps took one too many spills in the arena.",
+            "Status Report: Doug’s energy levels today are between a pancake breakfast and the last Stampede concert: shaky but hopeful.",
+            "Status Report: Doug is planning his first post-recovery adventure: heli skiing instead of Stampede rodeo rides this time.",
+            "Status Report: Doug’s staples are holding tighter than a cowboy’s grip during the bull riding finals.",
+            "Status Report: Doug feels like the final survivor of Stampede week: a little rough, but alive to tell the story."
         ];
 
+        let usedResponses = [];
+        let lastResponse = "";
+
         function generateAnswer() {
-            const randomIndex = Math.floor(Math.random() * responses.length);
-            const responseDiv = document.getElementById("response");
-            responseDiv.textContent = responses[randomIndex];
+            if (responses.length === 0) {
+                responses = [...usedResponses];
+                usedResponses = [];
+            }
+
+            let randomIndex, response;
+            do {
+                randomIndex = Math.floor(Math.random() * responses.length);
+                response = responses[randomIndex];
+            } while (response === lastResponse); // Prevent immediate repeats
+
+            responses.splice(randomIndex, 1);
+            usedResponses.push(response);
+
+            lastResponse = response;
+            document.getElementById("response").textContent = response;
         }
     </script>
 </body>
