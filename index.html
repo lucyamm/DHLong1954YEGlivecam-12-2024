@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Doug Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        h2 {
+            margin: 0;
+            color: #666;
+            font-size: 1.2em;
+        }
+        .magic-8-ball {
+            background: black;
+            color: white;
+            border: 3px solid #333;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .magic-8-ball:hover {
+            background: #333;
+            color: #ddd;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Doug Report</h1>
+    <h2>Curious about Doug's recovery? Wondering how he's doing? Click below for the latest scoop.</h2>
+    <div class="magic-8-ball" onclick="generateAnswer()">Update Now!</div>
+    <div id="response"></div>
+
+    <script>
+        const responses = [
+            "Status Report: Doug’s liver is performing better than a rig pump at peak flow.",
+            "Status Report: Doug’s diuretics are doing their job—he’s plotting his next trip to the washroom.",
+            "Status Report: Pepper just sent a letter demanding Doug return home immediately for belly rubs.",
+            "Status Report: Doug is contemplating smuggling Haagen-Dazs Vanilla Bean ice cream into the University of Alberta Hospital.",
+            "Status Report: Nancy delivered a stern lecture about skipping pain meds. Doug is rethinking his life choices.",
+            "Status Report: Doug is taste-testing dinner rolls. Verdict: they’d work well as construction bricks.",
+            "Status Report: Rob and Paul are brainstorming ways to sneak butter tarts into the hospital.",
+            "Status Report: Doug’s taste buds are on strike. Haagen-Dazs ice cream remains the only acceptable food.",
+            "Status Report: Doug’s diuretics have him hydrating like it’s a competitive sport.",
+            "Status Report: Doug’s staples are holding better than pipeline weld joints.",
+            "Status Report: Doug is planning a kiteboarding trip to celebrate his eventual discharge.",
+            "Status Report: Doug is debugging his appetite with butter tarts in mind.",
+            "Status Report: Pepper has volunteered to guard Doug’s Haagen-Dazs supply at the Airbnb.",
+            "Status Report: Doug has concluded that hospital spaghetti has no known flavor compounds.",
+            "Status Report: Nancy is cheerfully counting Doug’s staples as proof of his recovery.",
+            "Status Report: Doug is dreaming of snowboarding with Pepper on a splitboard sidecar.",
+            "Status Report: Doug’s energy level is recharging faster than an espresso-fueled drilling rig.",
+            "Status Report: Doug’s liver just installed a sign: ‘New, Improved, Now Accepting Butter Tarts.’",
+            "Status Report: Doug declared war on hospital pudding. The pudding won.",
+            "Status Report: Doug’s liver is high-performance, but hospital food is underperforming.",
+            "Status Report: Pepper is excited to join Doug at the Airbnb. The couch is calling her name.",
+            "Status Report: Doug suspects his diuretics are conspiring against his nap schedule.",
+            "Status Report: Doug is daydreaming about Nancy’s homemade butter tarts while staring at green Jell-O.",
+            "Status Report: Doug is drafting an engineering report on the texture of hospital mashed potatoes.",
+            "Status Report: Doug’s liver is celebrating its performance with a quiet rebellion against bad food.",
+            "Status Report: Doug’s liver feels youthful. Doug feels stapled together like IKEA furniture.",
+            "Status Report: Doug’s energy level today is 10% physical, 90% determined to leave the hospital.",
+            "Status Report: Doug’s sons Rob and Paul have scheduled an ‘Ice Cream Rescue Mission.’",
+            "Status Report: Doug’s love for Haagen-Dazs Vanilla Bean is stronger than his patience for hospital meals.",
+            "Status Report: Doug’s liver would appreciate a butter tart delivery ASAP.",
+            "Status Report: Doug is holding court in his room with Nancy and Pepper as his royal advisors.",
+            "Status Report: Doug’s recovery strategy now includes splitboard visualization therapy.",
+            "Status Report: Doug’s taste buds are threatening to strike unless ice cream is introduced.",
+            "Status Report: Nancy has informed Doug that skipping meds does not make him a hero.",
+            "Status Report: Pepper is ready to snowboard with Doug—once she figures out what a snowboard is."
+        ];
+
+        function generateAnswer() {
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            const responseDiv = document.getElementById("response");
+            responseDiv.textContent = responses[randomIndex];
+        }
+    </script>
+</body>
+</html>
