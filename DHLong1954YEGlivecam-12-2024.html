@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Doug Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        h2 {
+            margin: 0;
+            color: #666;
+            font-size: 1.2em;
+        }
+        .magic-8-ball {
+            background: black;
+            color: white;
+            border: 3px solid #333;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .magic-8-ball:hover {
+            background: #333;
+            color: #ddd;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Doug Report</h1>
+    <h2>push for update</h2>
+    <div class="magic-8-ball" onclick="generateAnswer()">🎱 Push Me!</div>
+    <div id="response"></div>
+
+    <script>
+        const responses = [
+            "Doug is designing a backcountry splitboard route through the University of Alberta Hospital.",
+            "Doug’s Gen Z liver just requested oat milk and an Instagram account.",
+            "Doug’s staples are holding better than a pipeline under max pressure.",
+            "Doug is currently rebuilding his appetite—taste buds remain skeptical.",
+            "Doug is snowboarding through recovery one imaginary powder turn at a time.",
+            "Doug’s liver is performing so well it just asked for a raise.",
+            "Doug is calculating his walking speed in feet per minute. Results: pending.",
+            "Doug skipped meds today. His liver approves; his pain sensors do not.",
+            "Doug is negotiating an upgrade to hospital food quality. Talks have stalled.",
+            "Doug’s new liver is settling in better than Pepper on a fresh couch.",
+            "Doug is counting staples like he used to count drilling rig bolts.",
+            "Doug is kiteboarding through the halls of the University of Alberta Hospital.",
+            "Doug is hosting a workshop on building baby benches with hospital supplies.",
+            "Doug just received his honorary 'Best Patient' award—Pepper would be proud.",
+            "Doug is imagining his next snowboard heli-drop and ignoring bad pudding.",
+            "Doug is practicing his guitar solos in his mind; nurses remain unaware.",
+            "Doug’s recovery graph looks more stable than Alberta oil prices.",
+            "Doug is taking a splitboard detour—down the hall and back to bed.",
+            "Doug’s liver is streaming live updates on recovery status. Viewer count: 1.",
+            "Doug just challenged his roommate to a 'quietest snorer' competition—and lost.",
+            "Doug is testing the tensile strength of hospital dinner rolls. Results: inconclusive.",
+            "Doug is biologically 60, mentally planning his next kiteboarding trip.",
+            "Doug’s energy today: recharging like a rig pump in low flow mode.",
+            "Doug is improving his splitboarding muscles by dodging nurse check-ins.",
+            "Doug just re-engineered his hospital bed for maximum nap efficiency.",
+            "Doug’s liver update: No leaks detected. Operating pressure optimal.",
+            "Doug is rating hospital meals on a scale of 1 to 'Please don’t.'",
+            "Doug’s taste buds have filed an official complaint against lunch.",
+            "Doug’s recovery strategy: nap, hydrate, and imagine perfect powder days.",
+            "Doug is mentally snowboarding down Whistler—staples and all.",
+            "Doug is contemplating escape. His plan involves a snowboard and determination.",
+            "Doug’s liver upgrade came in under budget and ahead of schedule—classic Barlon efficiency.",
+            "Doug is troubleshooting taste bud malfunctions with limited success.",
+            "Doug’s meal tray looks like a poorly planned engineering project. Unstable.",
+            "Doug is holding court as the King of the Transplant Ward. Long live Doug!",
+            "Doug’s liver is younger than his jokes, but both are doing their job.",
+            "Doug is now accepting sponsorships for his future snowboarding comeback.",
+            "Doug is reengineering his appetite. First step: fire the chef.",
+            "Doug is on a splitboard recovery tour—destination: the fridge for snacks.",
+            "Doug’s body: held together with staples. Doug’s spirit: held together with grit.",
+            "Doug is out of bed and back to work…imagining backcountry adventures.",
+            "Doug’s new liver is calculating snowboarding performance metrics. Results: epic.",
+            "Doug just achieved Level 10 Recovery Status. Next level: hospital discharge.",
+            "Doug is teaching a class titled 'How Not to Skip Pain Meds 101.'",
+            "Doug is healing faster than a pressure pump at full flow.",
+            "Doug just invented 'bench-boarding'—splitboarding while building baby benches.",
+            "Doug’s Gen Z liver doesn’t understand Doug’s music taste, but it’s cooperating.",
+            "Doug is debugging his taste buds for flavor optimization. Beta test ongoing.",
+            "Doug is holding up better than the last downhole pump he engineered.",
+            "Doug just installed a ‘Do Not Disturb’ sign. Roommate ignores it.",
+            "Doug’s liver status: rebooted, optimized, and working overtime.",
+            "Doug is evaluating splitboard routes through the snowy corners of his imagination.",
+            "Doug’s taste buds have officially resigned from service.",
+            "Doug is stapled up tighter than a flange joint under torque specs.",
+            "Doug’s new liver is calculating its ROI. Health dividends are positive.",
+            "Doug is leading a group hike to the end of the hallway. Achievement unlocked."
+        ];
+
+        function generateAnswer() {
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            const responseDiv = document.getElementById("response");
+            responseDiv.textContent = responses[randomIndex];
+        }
+    </script>
+</body>
+</html>
