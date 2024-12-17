@@ -23,10 +23,88 @@
             font-size: 1.2em;
         }
         .magic-8-ball {
-            background: black;
+            background: #e63946; /* Red color for liver */
             color: white;
-            border: 3px solid #333;
-            border-radius: 50%;
+            border: none;
             width: 150px;
-            height: 150px;
-            display
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50% 50% 60% 40%; /* Liver shape */
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .magic-8-ball:hover {
+            background: #b4232b; /* Darker red on hover */
+            color: #fff;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #444;
+            line-height: 1.8; /* Space between lines */
+        }
+    </style>
+</head>
+<body>
+    <h1>The Doug Report</h1>
+    <h2>Curious about Doug's recovery? Wondering how he's doing? Click below for the latest scoop.</h2>
+    <div class="magic-8-ball" onclick="generateAnswer()">Update Now!</div>
+    <div id="response"></div>
+
+    <script>
+        const responses = [
+            "Status Report: Doug is debugging his appetite with butter tarts. Results: promising, sweet, and sticky.",
+            "Status Report: Doug’s staples are holding stronger than his ability to recall 'the vague years' from university.",
+            "Status Report: Doug visualized heli skiing straight from the ICU to a perfect Canadian powder day.",
+            "Status Report: Liver failure: the free version of Ozempic. Doug does not recommend it.",
+            "Status Report: Doug suspects mashed potatoes were last used to repair drywall in ‘the vague years.’",
+            "Status Report: Doug’s appetite recovery graph: fueled by butter tarts, trending upward at high velocity.",
+            "Status Report: Doug’s hallway walks are now part of an Olympic training program. Category: splitboard cardio.",
+            "Status Report: Doug’s dry mouth demands restitution in the form of Haagen-Dazs Vanilla Bean ice cream.",
+            "Status Report: Doug calculated the tensile strength of spaghetti. Result: it collapsed under flavor inspection.",
+            "Status Report: Doug is mentally cat skiing today. Powder conditions: light and fluffy; spaghetti conditions: tragic.",
+            "Status Report: Doug’s liver is producing clean results. His humor: darker than hospital coffee.",
+            "Status Report: Doug’s old liver blamed schistosomiasis for its demise. Doug blames bad luck and poor timing.",
+            "Status Report: Doug submitted a recovery plan to Nancy. Key points: butter tarts, naps, and a cat skiing trip.",
+            "Status Report: Doug is considering installing a butter tart vending machine in the transplant ward.",
+            "Status Report: Doug remembers backcountry ascents as easier than keeping up with his diuretics.",
+            "Status Report: Doug’s next adventure will involve Pepper, snowboarding gear, and a heli drop with epic views.",
+            "Status Report: Doug’s staples are more reliable than his patience for hospital spaghetti.",
+            "Status Report: Doug’s liver reboot is running smoother than a rig pump with perfect flow rate.",
+            "Status Report: Doug survived the vague years, schistosomiasis, and mashed potatoes. A true comeback story.",
+            "Status Report: Doug just ranked hallway sprints on the difficulty scale between cat skiing and nap resistance.",
+            "Status Report: Doug’s engineering instincts kicked in when he considered reinforcing pudding cups for structural testing.",
+            "Status Report: Doug is petitioning to replace the food pyramid with one built entirely of butter tarts.",
+            "Status Report: Doug’s new liver doesn’t know what hit it, but it’s thriving. Old liver: probably bitter about Africa.",
+            "Status Report: Doug’s dry mouth is lobbying for a ceasefire. Doug counters with ice cream negotiations.",
+            "Status Report: Doug remembers heli skiing as less complicated than navigating hospital food trays.",
+            "Status Report: Doug is testing a theory that cat skiing dreams speed up recovery time. Initial results: positive.",
+            "Status Report: Doug’s liver recovery graph looks like a perfect black diamond descent: fast, smooth, unstoppable.",
+            "Status Report: Doug survived ‘the vague years.’ His liver survived schistosomiasis. Hospital food might be their final boss.",
+            "Status Report: Doug’s hallway trek today was upgraded to backcountry status. Route map: ICU to the pudding tray.",
+            "Status Report: Doug drafted his appetite recovery goals. Step one: butter tarts. Step two: repeat step one.",
+            "Status Report: Doug’s next business venture: heli skiing tours funded by butter tart royalties.",
+            "Status Report: Doug calculated his hallway lap ROI. Conclusion: Energy expended > spaghetti earned. Net loss.",
+            "Status Report: Doug’s dry mouth and spaghetti remain in a bitter stalemate. Butter tarts may mediate the peace.",
+            "Status Report: Doug was spotted mentally cat skiing through the Canadian Rockies. Brain altitude: perfect.",
+            "Status Report: Doug’s staples are so secure they were added to the oil rig safety protocol handbook.",
+            "Status Report: Doug’s liver reboot was smoother than a snowcat grooming fresh powder. Efficiency restored.",
+            "Status Report: Doug considered asking Nancy for an emotional support butter tart. She said no.",
+            "Status Report: Doug’s recovery strategy is fully optimized: naps, hydration, and mental heli drops on repeat.",
+            "Status Report: Doug’s appetite recovery is now outperforming his energy levels. Butter tarts for the win."
+        ];
+
+        function generateAnswer() {
+            const randomIndex = Math.floor(Math.random() * responses.length);
+            const responseDiv = document.getElementById("response");
+            responseDiv.textContent = responses[randomIndex];
+        }
+    </script>
+</body>
+</html>
