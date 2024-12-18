@@ -73,4 +73,72 @@
             "Status Report: Doug just launched a kiteboarding school in Antarctica, proving recovery fuels creativity.",
             "Status Report: Doug is recalculating pipeline pressure while napping on a ski lift. Rest is vital!",
             "Status Report: Doug is attempting to splitboard up the University of Alberta Hospital parking ramp for cardio practice.",
-            "Status Report: Doug’s liver is live-streaming its progress on TikTok: 'Day 
+            "Status Report: Doug’s liver is live-streaming its progress on TikTok: 'Day 30: No Parasites Allowed!'",
+            "Status Report: Doug is analyzing the structural integrity of his hospital dinner roll. Recovery requires humor.",
+            "Status Report: Doug just declared himself the Mayor of the Organ Transplant Ward at the University of Alberta Hospital. Should he go for a seat on the board, too?",
+            "Status Report: Doug is piloting a hovercraft across a frozen lake in Jasper—mental escapism is healthy.",
+            "Status Report: Doug is in the pediatric wing relentlessly challenging every child to arm wrestling competitions.",
+            "Status Report: Doug just discovered Pepper wrote him a letter about her adventures while waiting for him.",
+            "Status Report: Doug is negotiating peace between his liver and his taste buds—progress is steady.",
+            "Status Report: Doug is calculating his snowboarding recovery timeline with engineering precision.",
+            "Status Report: Doug is competing in the ‘most stoic transplant patient’ awards—and he’s sweeping the field.",
+            "Status Report: Doug is bored @ hospital. Wants to hear your thoughts on the climate crisis.",
+            "Status Report: Doug is working on the first splitboard with jet propulsion capabilities, fueled by grit.",
+            "Status Report: Doug is hosting a TED Talk titled 'Staples: The Unsung Heroes of Post-Surgery Recovery.'",
+            "Status Report: Doug is training for the 'Recover Faster Than Expected' Olympics with physio sessions.",
+            "Status Report: Doug is repairing the oil and gas industry’s reputation while recovering with humor.",
+            "Status Report: Doug is on hunger strike until he gets his fudge.",
+            "Reminder for the haters: Even without a liver, Doug could do more pushups than all ya'll.",
+            "Status Report: Doug has written to Make a Wish. He's requested the foundation address the crime against his eyes that is hospital decor.",
+            "Status Report: Doug wishes he could vape right about now.",
+            "Status Report: Doug is playing mind games with the new residents.",
+            "Status Report: Doug wants everyone to STOP asking where he's getting Ozempic. It's all natural (liver failure), baby.",
+            "Poll: Should Doug tell people his scar is from A) shark attack, B) donating a lobe to Meghan Markle, C) his time in the sandbox?",
+            "Status Report: Doug wants you all to remember that hard work beats talent when talent doesn't work hard.",
+            "Status Report: Doug has been arrested on suspicion of beating liver failure. This is his second arrest. Only a few years ago, Doug was charged with murdering Schistosomiasis.",
+            "Status Report: Doug has officially challenged his new liver to an arm-wrestling match. Odds are even.",
+            "Status Report: Doug said his staples make him look like the protagonist in a low-budget superhero movie.",
+            "Status Report: Doug wants it known that he survived liver failure, but he won’t survive another hospital pudding.",
+            "Status Report: Doug is considering renaming his liver ‘Captain Resilient.’ Merchandise is pending.",
+            "Status Report: Doug has applied for parole from the transplant ward. His case looks strong.",
+            "Status Report: Doug’s liver has been offered a sponsorship deal with an organic farm. Negotiations are underway.",
+            "Status Report: Doug’s hallway laps have been upgraded to Olympic training sessions. Judges give him a 10.",
+            "Status Report: Doug insists that recovery is a full-contact sport. His nurse respectfully disagrees.",
+            "Status Report: Doug said his scar looks like a GPS route to Edmonton. Pepper’s already mapped it out.",
+            "Status Report: Doug wants you to know that his staples have more integrity than most political campaigns.",
+            "Status Report: Doug claims his diuretics are just the medical equivalent of cardio. He’s over it.",
+            "Status Report: Doug can confirm, liver transplant > botox for frown lines.",
+            "Status Report: Doug was overheard telling the staff he plans to snowboard off his hospital bed at discharge.",
+            "Status Report: Doug said he might start charging his liver rent. Youthful organs don’t get a free ride.",
+            "Status Report: Doug is workshopping a one-man show titled *Staples & Sass: A Transplant Journey.*",
+            "Status Report: Doug’s latest poll on scar stories has a surprising write-in option: ‘Fencing champion gone wrong.’",
+            "Status Report: Doug is lobbying for butter tarts to be recognized as a recovery superfood.",
+            "Status Report: Doug believes his diuretics were created by a committee of marathon organizers. Results: relentless.",
+            "Status Report: Doug has declared himself the unofficial mayor of the transplant ward. His slogan: ‘Liver strong.’",
+            "Status Report: Doug just renamed his hallway laps 'The Recovery Derby.' Early bets are on him to win."
+        ];
+
+        let usedResponses = [];
+        let lastResponse = "";
+
+        function generateAnswer() {
+            if (responses.length === 0) {
+                responses = [...usedResponses];
+                usedResponses = [];
+            }
+
+            let randomIndex, response;
+            do {
+                randomIndex = Math.floor(Math.random() * responses.length);
+                response = responses[randomIndex];
+            } while (response === lastResponse);
+
+            responses.splice(randomIndex, 1);
+            usedResponses.push(response);
+
+            lastResponse = response;
+            document.getElementById("response").textContent = response;
+        }
+    </script>
+</body>
+</html>
