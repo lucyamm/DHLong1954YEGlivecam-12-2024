@@ -60,85 +60,17 @@
 
     <script>
         let responses = [
-            "Status Update: Doug is conquering mountains today—his hallway laps at the University of Alberta Hospital feel like Everest climbs.",
-            "Status Update: Doug’s liver is quiet today. All systems go as it supports his recovery.",
-            "Status Update: Doug is skating around West Edmonton Mall. Nobody is pleased.",
-            "Status Update: Doug is debugging his appetite with butter tarts. Results: promising, sweet, and sticky.",
-            "Status Update: Doug just entered a mental splitboarding tournament on Mars to distract from dry mouth.",
-            "Status Update: Doug wants everyone to remember that safety tomorrow is a day too late. PPE FTW!",
-            "Status Update: Doug’s liver is hosting a podcast about youthful rebellion while adjusting to its new role.",
-            "Status Update: Doug’s staples are holding stronger than a pipeline weld during a pressure test.",
-            "Status Update: Doug is drilling for some caffeine. Apparently his roomie doesn't know what headphones are #uncouth", 
-            "Status Update: Doug is constructing the world’s smallest pipeline for Pepper’s water bowl—hydration is key.",
-            "Status Update: Doug just launched a kiteboarding school in Antarctica, proving recovery fuels creativity.",
-            "Status Update: Doug is recalculating pipeline pressure while napping on a ski lift. Rest is vital!",
-            "Status Update: Doug is attempting to splitboard up the University of Alberta Hospital parking ramp for cardio practice.",
-            "Status Update: Doug’s liver is live-streaming its progress on TikTok: 'Day 30: No Parasites Allowed!'",
-            "Status Update: Doug is analyzing the structural integrity of his hospital dinner roll. Recovery requires humor.",
-            "Status Update: Doug just declared himself the Mayor of the Organ Transplant Ward at the University of Alberta Hospital. Should he go for a seat on the board, too?",
-            "Status Update: Doug is piloting a hovercraft across a frozen lake in Jasper—mental escapism is healthy.",
-            "Status Update: Doug is in the pediatric wing relentlessly challenging every child to arm wrestling competitions.",
-            "Status Update: Doug just discovered Pepper wrote him a letter about her adventures while waiting for him.",
-            "Status Update: Doug is negotiating peace between his liver and his taste buds—progress is steady.",
-            "Status Update: Doug is calculating his snowboarding recovery timeline with engineering precision.",
-            "Status Update: Doug is competing in the ‘most stoic transplant patient’ awards—and he’s sweeping the field.",
-            "Status Update: Doug is bored @ hospital. Wants to hear your thoughts on the climate crisis.",
-            "Status Update: Doug is working on the first splitboard with jet propulsion capabilities, fueled by grit.",
-            "Status Update: Doug is hosting a TED Talk titled 'Staples: The Unsung Heroes of Post-Surgery Recovery.'",
-            "Status Update: Doug is training for the 'Recover Faster Than Expected' Olympics with physio sessions.",
-            "Status Update: Doug is repairing the oil and gas industry’s reputation while recovering with humor.",
-            "Status Update: Doug is on hunger strike until he gets his fudge.",
-            "Reminder for the haters: Even without a liver, Doug could do more pushups than all ya'll.",
-            "Status Update: Doug has written to Make a Wish. He's requested the foundation address the crime against his eyes that is hospital decor.",
-            "Status Update: Doug wishes he could vape right about now.",
-            "Status Update: Doug is playing mind games with the new residents.",
-            "Status Update: Doug wants everyone to STOP asking where he's getting Ozempic. It's all natural (liver failure), baby.",
-            "Poll: Should Doug tell people his scar is from A) shark attack, B) donating a lobe to Meghan Markle, C) his time in the sandbox?",
-            "Status Update: Doug wants you all to remember that hard work beats talent when talent doesn't work hard.",
-            "Status Update: Doug has been arrested on suspicion of beating liver failure. This is his second arrest. Only a few years ago, Doug was charged with murdering Schistosomiasis.",
-            "Status Update: Doug has officially challenged his new liver to an arm-wrestling match. Odds are even.",
-            "Status Update: Doug said his staples make him look like the protagonist in a low-budget superhero movie.",
-            "Status Update: Doug wants it known that he survived liver failure, but he won’t survive another hospital pudding.",
-            "Status Update: Doug is considering renaming his liver ‘Captain Resilient.’ Merchandise is pending.",
-            "Status Update: Doug has applied for parole from the transplant ward. His case looks strong.",
-            "Status Update: Doug’s liver has been offered a sponsorship deal with an organic farm. Negotiations are underway.",
-            "Status Update: Doug’s hallway laps have been upgraded to Olympic training sessions. Judges give him a 10.",
-            "Status Update: Doug insists that recovery is a full-contact sport. His nurse respectfully disagrees.",
-            "Status Update: Doug said his scar looks like a GPS route to Edmonton. Pepper’s already mapped it out.",
-            "Status Update: Doug wants you to know that his staples have more integrity than most political campaigns.",
-            "Status Update: Doug claims his diuretics are just the medical equivalent of cardio. He’s over it.",
-            "Status Update: Doug can confirm, liver transplant > botox for frown lines.",
-            "Status Update: Doug was overheard telling the staff he plans to snowboard off his hospital bed at discharge.",
-            "Status Update: Doug said he might start charging his liver rent. Youthful organs don’t get a free ride.",
-            "Status Update: Doug is workshopping a one-man show titled *Staples & Sass: A Transplant Journey.*",
-            "Status Update: Doug’s latest poll on scar stories has a surprising write-in option: ‘Fencing champion gone wrong.’",
-            "Status Update: Doug is lobbying for butter tarts to be recognized as a recovery superfood.",
-            "Status Update: Doug believes his diuretics were created by a committee of marathon organizers. Results: relentless.",
-            "Status Update: Doug has declared himself the unofficial mayor of the transplant ward. His slogan: ‘Liver strong.’",
-            "Status Update: Doug just renamed his hallway laps 'The Recovery Derby.' Early bets are on him to win."
-        ];
-
-        let usedResponses = [];
-        let lastResponse = "";
-
-        function generateAnswer() {
-            if (responses.length === 0) {
-                responses = [...usedResponses];
-                usedResponses = [];
-            }
-
-            let randomIndex, response;
-            do {
-                randomIndex = Math.floor(Math.random() * responses.length);
-                response = responses[randomIndex];
-            } while (response === lastResponse);
-
-            responses.splice(randomIndex, 1);
-            usedResponses.push(response);
-
-            lastResponse = response;
-            document.getElementById("response").textContent = response;
-        }
-    </script>
-</body>
-</html>
+            "Status Report: Doug is conquering mountains today—his hallway laps at the University of Alberta Hospital feel like Everest climbs.",
+            "Status Report: Doug’s liver is quiet today. All systems go as it supports his recovery.",
+            "Status Report: Doug is skating around West Edmonton Mall. Nobody is pleased.",
+            "Status Report: Doug is debugging his appetite with butter tarts. Results: promising, sweet, and sticky.",
+            "Status Report: Doug just entered a mental splitboarding tournament on Mars to distract from dry mouth.",
+            "Status Report: Doug wants everyone to remember that safety tomorrow is a day too late. PPE FTW!",
+            "Status Report: Doug’s liver is hosting a podcast about youthful rebellion while adjusting to its new role.",
+            "Status Report: Doug’s staples are holding stronger than a pipeline weld during a pressure test.",
+            "Status Report: Doug is drilling for some caffeine. Apparently his roomie doesn't know what headphones are #uncouth", 
+            "Status Report: Doug is constructing the world’s smallest pipeline for Pepper’s water bowl—hydration is key.",
+            "Status Report: Doug just launched a kiteboarding school in Antarctica, proving recovery fuels creativity.",
+            "Status Report: Doug is recalculating pipeline pressure while napping on a ski lift. Rest is vital!",
+            "Status Report: Doug is attempting to splitboard up the University of Alberta Hospital parking ramp for cardio practice.",
+            "Status Report: Doug’s liver is live-streaming its progress on TikTok: 'Day 
