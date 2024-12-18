@@ -359,35 +359,42 @@
             "BOLO: Man with Mercedes incision breaking into ortho suites mid surgery and yelling \"drill baby, drill\". Surgeons alarmed.",
             // [Additional 480 updates would be added here - I'll help you generate more if needed]
         ];
-
         let lastIndex = -1;
 
         function updateStatus() {
             let index;
-            do {
-                index = Math.floor(Math.random() * statusUpdates.length);
-            } while (index === lastIndex && statusUpdates.length > 1);
-            
+            if (statusUpdates.length > 1) {
+                do {
+                    index = Math.floor(Math.random() * statusUpdates.length);
+                } while (index === lastIndex);
+            } else {
+                index = 0;
+            }
             lastIndex = index;
+
             const status = statusUpdates[index];
-            
-            document.getElementById('status-report').textContent = "Status Report: " + status;
-            
-            // Handle special cases (like the Johnny Cash video)
+
+            // Check if a colon exists in the first three words
+            const firstThreeWords = status.split(/\s+/).slice(0, 3).join(' ');
+            const prependStatus = !firstThreeWords.includes(':');
+
+            // Prepend "Status Report: " only if needed
+            const displayStatus = prependStatus ? `Status Report: ${status}` : status;
+
+            document.getElementById('status-report').textContent = displayStatus;
+
             const videoContainer = document.getElementById('video-container');
             const videoFrame = videoContainer.querySelector('iframe');
-            
             if (status.includes("Johnny Cash's 'Hurt'")) {
                 videoContainer.style.display = 'block';
                 videoFrame.src = 'https://www.youtube.com/embed/8AHCfZTRGiI';
             } else {
                 videoContainer.style.display = 'none';
                 videoFrame.src = '';
-            }
+            }   
         }
 
-        // Show initial status
         updateStatus();
-    </script>
+    </script>   
 </body>
 </html>
