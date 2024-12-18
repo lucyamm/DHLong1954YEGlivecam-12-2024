@@ -71,26 +71,46 @@
 
     <script>
         let responses = [
-            "Status Report: Doug is debugging his appetite with butter tarts. Results: promising, sweet, and sticky.",
-            "Status Report: Liver failure: the free version of Ozempic. Doug does not recommend it.",
-            "Status Report: Doug’s hallway laps feel like backcountry splitboard treks—slow climbs, big rewards.",
-            "Status Report: Doug feels like the last cowboy at the Calgary Stampede: tired, slightly queasy, but still standing.",
-            "Status Report: Doug’s liver recovery has the stamina of someone surviving Stampede breakfasts and late-night rodeos.",
-            "Status Report: Doug says he feels like Stampede Sunday: everything hurts, but he’s proud of making it through.",
-            "Status Report: Doug’s energy today: less cowboy bull riding, more post-Stampede nap in the shade.",
-            "Status Report: Doug ranked his dry mouth as Stampede-level dehydration after a pancake breakfast marathon.",
-            "Status Report: Doug’s old liver put in 30 years of rodeo, and schistosomiasis finally bucked it off.",
-            "Status Report: Doug says his liver is recovering better than most people do after Stampede beer gardens.",
-            "Status Report: Doug’s appetite declared butter tarts the cure for all post-Stampede fatigue. Spaghetti remains banned.",
-            "Status Report: Doug dreams of cat skiing through pristine powder—anything to escape Stampede flashbacks.",
-            "Status Report: Doug’s hallway walks are slower than a cowboy leaving the Stampede after 10 days of rodeo life.",
-            "Status Report: Doug’s liver is now officially healthier than the guy who rode the mechanical bull too many times.",
-            "Status Report: Doug remembers Stampede Sundays fondly: tired, sore, but still celebrating the wins—just like recovery.",
-            "Status Report: Doug is feeling stapled together, like the cowboy whose chaps took one too many spills in the arena.",
-            "Status Report: Doug’s energy levels today are between a pancake breakfast and the last Stampede concert: shaky but hopeful.",
-            "Status Report: Doug is planning his first post-recovery adventure: heli skiing instead of Stampede rodeo rides this time.",
-            "Status Report: Doug’s staples are holding tighter than a cowboy’s grip during the bull riding finals.",
-            "Status Report: Doug feels like the final survivor of Stampede week: a little rough, but alive to tell the story."
+            // Liver Recovery
+            "Status Report: Doug’s liver transplant is holding up better than his old Smart Car with vanity plates.",
+            "Status Report: Doug’s staples are as solid as pipeline welds—zero leaks reported.",
+            "Status Report: Doug says the anti-rejection drugs have one job, and they’re crushing it.",
+            
+            // Physiotherapy
+            "Status Report: Doug’s physiotherapy sessions feel like backcountry ascents—slow, sweaty, but worth it.",
+            "Status Report: Doug set a personal best in physiotherapy today. Next stop: Canmore hikes with Nancy.",
+            
+            // Nancy and Family
+            "Status Report: Nancy’s project management skills now include wrangling anti-rejection schedules and butter tart logistics.",
+            "Status Report: Nancy reported that the Airbnb couch has survived Pepper’s approval process—so far.",
+            "Status Report: Rob and Paul are planning Doug’s first post-recovery adventure: butter tarts in Canmore.",
+            "Status Report: Pepper is gearing up to test Doug’s physiotherapy by demanding endless ball throws.",
+            
+            // Engineering and Oil Rigs
+            "Status Report: Doug says waking up for physiotherapy is easier than waking up to a midnight rig blowout call.",
+            "Status Report: Doug’s staples are tighter than a rig flange after an all-nighter in the field.",
+            "Status Report: Doug’s anti-rejection meds are performing better than the downhole pumps he once supervised.",
+            "Status Report: Doug joked that his liver upgrade cost less than downtime on an oil well failure.",
+            
+            // Calgary Clubs
+            "Status Report: Doug is plotting his triumphant return to the Calgary Country Club. First order of business: ice cream in the lounge.",
+            "Status Report: Doug dreams of a post-recovery round of golf at the Glencoe. He’ll settle for hallway laps for now.",
+            "Status Report: Doug says the ICU hallway has fewer obstacles than the back nine at the Country Club.",
+            
+            // Canmore
+            "Status Report: Doug’s first post-recovery goal is a Canmore hike followed by Haagen-Dazs recovery therapy.",
+            "Status Report: Doug is mentally splitboarding in Canmore while nurses try to keep him grounded.",
+            "Status Report: Doug says physiotherapy is preparing him for the Canmore trails. Nancy is already packing snacks.",
+            
+            // Humor and Recovery
+            "Status Report: Doug ranks hallway walks above spaghetti night but below butter tart taste testing.",
+            "Status Report: Doug’s dry mouth is lobbying for better hydration strategies—Haagen-Dazs is the preferred solution.",
+            "Status Report: Doug says hospital mashed potatoes are tougher than engineering project deadlines.",
+            "Status Report: Doug calculated hallway laps: 50% exercise, 50% ice cream justification.",
+            "Status Report: Doug says if staples were stock options, he’d be a very secure investment.",
+            
+            // Fun Car Reference
+            "Status Report: Doug says his liver upgrade runs smoother than his old Smart Car hauling ass across Alberta."
         ];
 
         let usedResponses = [];
@@ -98,7 +118,7 @@
 
         function generateAnswer() {
             if (responses.length === 0) {
-                responses = [...usedResponses];
+                responses = [...usedResponses]; // Refill the pool
                 usedResponses = [];
             }
 
