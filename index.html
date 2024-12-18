@@ -22,6 +22,12 @@
         .subtitle {
             font-size: 1.2em;
             color: #666;
+            margin: 20px 0 40px;
+            font-style: italic;
+        }
+        .button-container {
+            position: relative; /* Allows text to overlay the button */
+            display: inline-block;
             margin-bottom: 40px;
         }
         .image-button {
@@ -39,14 +45,27 @@
             transform: scale(1.5);
             opacity: 0.9;
         }
-        #status-report {
+        .button-text {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for text size */
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            pointer-events: none; /* Ensures clicking only triggers the button */
+        }
+         #status-report {
             font-size: 1.3em;
             color: #444;
             margin-top: 30px;
             padding: 20px;
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 2px solid #ddd; /* White box with border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow for depth */
+            display: inline-block; /* Center box */
         }
         .video-container {
             margin-top: 30px;
