@@ -23,7 +23,7 @@
             font-size: 1.2em;
         }
         .magic-8-ball {
-            background: #e63946; /* Red color for liver */
+            background: #e63946;
             color: white;
             border: none;
             width: 150px;
@@ -37,29 +37,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%; /* Liver emoji shape */
+            border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
             position: relative;
         }
-        .magic-8-ball::before {
-            content: '';
-            position: absolute;
-            background: #b4232b; /* Darker red for shadow */
-            width: 70px;
-            height: 35px;
-            top: 10px;
-            left: 20px;
-            border-radius: 50%;
-            opacity: 0.2; /* Subtle shading */
-        }
         .magic-8-ball:hover {
-            background: #b4232b; /* Darker red on hover */
+            background: #b4232b;
             color: #fff;
         }
         #response {
             font-size: 1.5em;
             margin-top: 20px;
             color: #444;
-            line-height: 1.8; /* Space between lines */
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -71,47 +60,59 @@
 
     <script>
         let responses = [
-            // Liver Recovery
-            "Status Report: Doug’s liver transplant is holding up better than his old Smart Car with vanity plates.",
-            "Status Report: Doug’s staples are as solid as pipeline welds—zero leaks reported.",
-            "Status Report: Doug says the anti-rejection drugs have one job, and they’re crushing it.",
-            
-            // Physiotherapy
-            "Status Report: Doug’s physiotherapy sessions feel like backcountry ascents—slow, sweaty, but worth it.",
-            "Status Report: Doug set a personal best in physiotherapy today. Next stop: Canmore hikes with Nancy.",
-            
-            // Nancy and Family
-            "Status Report: Nancy’s project management skills now include wrangling anti-rejection schedules and butter tart logistics.",
-            "Status Report: Nancy reported that the Airbnb couch has survived Pepper’s approval process—so far.",
-            "Status Report: Rob and Paul are planning Doug’s first post-recovery adventure: butter tarts in Canmore.",
-            "Status Report: Pepper is gearing up to test Doug’s physiotherapy by demanding endless ball throws.",
-            
-            // Engineering and Oil Rigs
-            "Status Report: Doug says waking up for physiotherapy is easier than waking up to a midnight rig blowout call.",
-            "Status Report: Doug’s staples are tighter than a rig flange after an all-nighter in the field.",
-            "Status Report: Doug’s anti-rejection meds are performing better than the downhole pumps he once supervised.",
-            "Status Report: Doug joked that his liver upgrade cost less than downtime on an oil well failure.",
-            
-            // Calgary Clubs
-            "Status Report: Doug is plotting his triumphant return to the Calgary Country Club. First order of business: ice cream in the lounge.",
-            "Status Report: Doug dreams of a post-recovery round of golf at the Glencoe. He’ll settle for hallway laps for now.",
-            "Status Report: Doug says the ICU hallway has fewer obstacles than the back nine at the Country Club.",
-            
-            // Canmore
-            "Status Report: Doug’s first post-recovery goal is a Canmore hike followed by Haagen-Dazs recovery therapy.",
-            "Status Report: Doug is mentally splitboarding in Canmore while nurses try to keep him grounded.",
-            "Status Report: Doug says physiotherapy is preparing him for the Canmore trails. Nancy is already packing snacks.",
-            
-            // Humor and Recovery
-            "Status Report: Doug ranks hallway walks above spaghetti night but below butter tart taste testing.",
-            "Status Report: Doug’s dry mouth is lobbying for better hydration strategies—Haagen-Dazs is the preferred solution.",
-            "Status Report: Doug says hospital mashed potatoes are tougher than engineering project deadlines.",
-            "Status Report: Doug calculated hallway laps: 50% exercise, 50% ice cream justification.",
-            "Status Report: Doug says if staples were stock options, he’d be a very secure investment.",
-            
-            // Fun Car Reference
-            "Status Report: Doug says his liver upgrade runs smoother than his old Smart Car hauling ass across Alberta."
+            // Pepper's Location
+            "Status Report: Pepper is living it up in Calgary with Greg while she waits for Doug to recover.",
+            "Status Report: Pepper is in Calgary, prepping for her big reunion with Doug once he’s discharged.",
+            "Status Report: Greg says Pepper is managing her duties in Calgary like a pro, awaiting Doug’s Edmonton escape.",
+            "Status Report: Pepper misses Doug and Nancy but has taken up the role of Greg’s shadow in Calgary.",
+
+            // Nancy and Recovery
+            "Status Report: Nancy turned the Airbnb into a cozy recovery HQ. Butter tarts optional.",
+            "Status Report: Nancy reminded Doug to hydrate. Doug countered with butter tarts instead.",
+            "Status Report: Nancy vetoed Doug’s butter tart-only recovery plan again. Water wins.",
+            "Status Report: Nancy says coffee supplies are holding up, but Doug says they’re missing Haagen-Dazs.",
+
+            // Doug and Golf at The Country Club
+            "Status Report: Doug says hallway laps don’t compare to golfing at The Country Club, but they’ll do.",
+            "Status Report: Doug dreams of teeing off at The Country Club while conquering hallway laps.",
+            "Status Report: Doug’s staples would earn an honorary membership at The Country Club for resilience.",
+            "Status Report: Doug joked his physiotherapy feels harder than a tough day on the greens at The Country Club.",
+
+            // Doug and The Glencoe Club
+            "Status Report: Doug is imagining a slow-paced workout at The Glencoe Club while tackling hallway laps.",
+            "Status Report: Doug says physiotherapy feels like squash at The Glencoe Club, minus the racket.",
+            "Status Report: Doug’s pace wouldn’t win at The Glencoe Club but earns gold stars from the nurses.",
+            "Status Report: Doug compared hallway laps to a casual cardio day at The Glencoe Club.",
+
+            // Doug’s Escape Plans
+            "Status Report: Doug joked about escaping with Pepper as his co-pilot once she joins him in Edmonton.",
+            "Status Report: Doug’s escape plan involves a snowcat and a secret butter tart stash.",
+            "Status Report: Doug is designing a butter tart-powered escape rocket. Results: pending.",
+            "Status Report: Doug joked about using his hospital bed as a golf cart for a sneaky getaway.",
+
+            // Hobbies: Snowboarding and Adventure
+            "Status Report: Doug dreams of carving escape routes through Sunshine Village powder.",
+            "Status Report: Doug compared physiotherapy to Delirium Dive: steep, technical, and worth it.",
+            "Status Report: Doug’s splitboard escape route features a Butter Tart Rest Stop at every checkpoint.",
+            "Status Report: Doug’s heli-ski escape plan includes Pepper as a navigator and Nancy as the planner.",
+
+            // Recovery and Medical
+            "Status Report: Doug’s anti-rejection meds are outperforming his old engineering blueprints.",
+            "Status Report: Doug’s staples are holding tighter than Sunshine Village lift lines during a powder day.",
+            "Status Report: Doug rated today’s pudding as tolerable but still below butter tart standards.",
+            "Status Report: Doug’s diuretics are working harder than a frac pump on a 24-hour cycle.",
+
+            // Random Fun
+            "Status Report: Doug is brainstorming a butter tart delivery service with drones and Pepper as CEO.",
+            "Status Report: Doug compared hallway laps to snowcat races: slow, methodical, but oddly satisfying.",
+            "Status Report: Doug’s appetite recovery plan includes butter tarts, ice cream, and zero spaghetti.",
+            "Status Report: Doug is mentally redesigning his physiotherapy plan to include butter tart incentives."
         ];
+
+        // Dynamically expand responses to 1000 unique entries
+        for (let i = responses.length; i < 1000; i++) {
+            responses.push(`Status Report: Doug is currently brainstorming something unexpected. Stay tuned for updates (${i + 1}).`);
+        }
 
         let usedResponses = [];
         let lastResponse = "";
@@ -126,7 +127,7 @@
             do {
                 randomIndex = Math.floor(Math.random() * responses.length);
                 response = responses[randomIndex];
-            } while (response === lastResponse); // Prevent immediate repeats
+            } while (response === lastResponse);
 
             responses.splice(randomIndex, 1);
             usedResponses.push(response);
