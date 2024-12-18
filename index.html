@@ -26,7 +26,7 @@
             font-style: italic;
         }
         .button-container {
-            position: relative; /* Allows text to overlay the button */
+            position: relative;
             display: inline-block;
             margin-bottom: 15px;
         }
@@ -40,6 +40,7 @@
             display: inline-block;
             margin-bottom: 15px;
             transition: transform 0.2s ease, opacity 0.2s ease;
+            position: relative; /* Added for text positioning */
         }
         .image-button:hover {
             transform: scale(1.5);
@@ -47,25 +48,29 @@
         }
         .button-text {
             position: absolute;
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust for text size */
-            color: white;
-            font-size: 2.5em; /* Make text larger */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;  /* Changed to white */
+            font-size: 2.5em;  /* Increased from 1.5em */
             font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Added for better visibility */
             text-align: center;
-            pointer-events: none; /* Ensures clicking only triggers the button */
+            pointer-events: none;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
         }
-         #status-report {
+        #status-report {
             font-size: 1.5em;
             color: #444;
             margin-top: 15px;
             padding: 20px;
             background-color: white;
-            border: 2px solid #ddd; /* White box with border */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow for depth */
-            display: inline-block; /* Center box */
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: inline-block;
         }
         .video-container {
             margin-top: 20px;
@@ -78,12 +83,13 @@
     <div style="font-size: 1.1em; color: #666; margin-bottom: 20px; margin-top: -10px; font-style: italic;">Curious about Doug's recovery? Click below for the latest scoop on his post-transplant condition!</div>
     <div class="subtitle">
     </div>
-    <button class="image-button" aria-label="Click to update status" onclick="updateStatus()">Update Now!</button>
+    <button class="image-button" aria-label="Click to update status" onclick="updateStatus()">
+        <span class="button-text">Update Now!</span>
+    </button>
     <div id="status-report"></div>
     <div id="video-container" class="video-container">
         <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
     <script>
         const statusUpdates = [
             // Original updates
