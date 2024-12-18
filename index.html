@@ -60,66 +60,85 @@
 
     <script>
         let responses = [
-            // Pepper's Location
-            "Status Report: Pepper is living it up in Calgary with Greg while she waits for Doug to recover.",
-            "Status Report: Pepper is in Calgary, prepping for her big reunion with Doug once he’s discharged.",
-            "Status Report: Greg says Pepper is managing her duties in Calgary like a pro, awaiting Doug’s Edmonton escape.",
-            "Status Report: Pepper misses Doug and Nancy but has taken up the role of Greg’s shadow in Calgary.",
+            // Recovery Updates
+            "Status Report: Doug’s physiotherapist just set a new hallway lap record. Doug says it’s ‘unofficial.’",
+            "Status Report: Doug’s appetite is back, but spaghetti is still on the banned list for life.",
+            "Status Report: Doug’s staples are winning the title of ‘strongest part of the operation.’",
+            "Status Report: Doug compared physiotherapy to snowboarding uphill without bindings—slow but rewarding.",
+            "Status Report: Doug’s liver is thriving. Spaghetti? Not so much.",
+            "Status Report: Doug rated today’s pudding a generous 3/10. Butter tarts remain undefeated.",
+            "Status Report: Doug says hydration is key, but he still prefers hydration with a side of butter tarts.",
+            "Status Report: Doug is lobbying for Haagen-Dazs Vanilla Bean as an essential part of recovery.",
+            "Status Report: Doug’s staples just entered their 7th day of holding strong. Nurses are applauding.",
+            "Status Report: Doug’s dry mouth has been renamed ‘desert conditions.’ Ice chips are the only relief.",
 
-            // Nancy and Recovery
-            "Status Report: Nancy turned the Airbnb into a cozy recovery HQ. Butter tarts optional.",
-            "Status Report: Nancy reminded Doug to hydrate. Doug countered with butter tarts instead.",
-            "Status Report: Nancy vetoed Doug’s butter tart-only recovery plan again. Water wins.",
-            "Status Report: Nancy says coffee supplies are holding up, but Doug says they’re missing Haagen-Dazs.",
+            // Escape Plans
+            "Status Report: Doug’s next escape plan includes Pepper as the getaway driver once she arrives.",
+            "Status Report: Doug has requested snowshoes for his hallway escape attempts. The nurses said no.",
+            "Status Report: Doug’s IV pole has been secretly rebranded ‘The Escape Vehicle 3000.’",
+            "Status Report: Doug joked about parachuting out of his room window with a butter tart as ballast.",
+            "Status Report: Doug’s blueprint for escape includes a snowboard, a rope, and Nancy as logistics manager.",
+            "Status Report: Doug’s liver isn’t on board with his kiteboard escape plan. Doug called it a ‘buzzkill.’",
+            "Status Report: Doug mapped his hospital hallway escape route. Step 1: avoid spaghetti night.",
+            "Status Report: Doug’s escape committee includes Pepper, Greg, and a stash of butter tarts.",
+            "Status Report: Doug’s latest escape idea involves commandeering a snowcat. Engineers are intrigued.",
+            "Status Report: Doug compared hallway laps to Stampede chuckwagon training for his big breakout.",
 
-            // Doug and Golf at The Country Club
-            "Status Report: Doug says hallway laps don’t compare to golfing at The Country Club, but they’ll do.",
-            "Status Report: Doug dreams of teeing off at The Country Club while conquering hallway laps.",
-            "Status Report: Doug’s staples would earn an honorary membership at The Country Club for resilience.",
-            "Status Report: Doug joked his physiotherapy feels harder than a tough day on the greens at The Country Club.",
+            // Pepper, Nancy, and Family
+            "Status Report: Pepper is perfecting her welcome-home bark in Calgary under Greg’s watchful eye.",
+            "Status Report: Nancy says Doug’s butter tart allowance depends on his physiotherapy score.",
+            "Status Report: Doug’s grandkids are drawing escape maps with butter tart markers. Future architects?",
+            "Status Report: Doug told Nancy his staples could rival the Eiffel Tower in engineering precision.",
+            "Status Report: Pepper has been placed on couch-guard duty in Calgary while Doug recovers.",
+            "Status Report: Doug’s grandkids suggested a hospital recovery scavenger hunt. Clues: all butter tart related.",
+            "Status Report: Nancy vetoed Doug’s plan to hire Pepper as a hallway lap cheerleader.",
+            "Status Report: Greg says Pepper is busy guarding the butter tart stash in Calgary.",
+            "Status Report: Doug’s grandkids sent him a paper crown titled ‘King of the Recovery Hallways.’",
+            "Status Report: Nancy is organizing Doug’s butter tart supply chain logistics. She’s a natural at it.",
 
-            // Doug and The Glencoe Club
-            "Status Report: Doug is imagining a slow-paced workout at The Glencoe Club while tackling hallway laps.",
-            "Status Report: Doug says physiotherapy feels like squash at The Glencoe Club, minus the racket.",
-            "Status Report: Doug’s pace wouldn’t win at The Glencoe Club but earns gold stars from the nurses.",
-            "Status Report: Doug compared hallway laps to a casual cardio day at The Glencoe Club.",
+            // Snowboarding and Adventure
+            "Status Report: Doug’s next heli-ski trip will include a pit stop for butter tarts at the halfway point.",
+            "Status Report: Doug ranked hallway laps just below powder days and slightly above rig safety drills.",
+            "Status Report: Doug says Sunshine Village powder is calling, but so is his physiotherapist.",
+            "Status Report: Doug compared today’s hallway laps to a splitboard ascent: slow, uphill, but rewarding.",
+            "Status Report: Doug’s liver requested a ‘low-risk’ heli-ski adventure. Doug ignored the ‘low-risk’ part.",
+            "Status Report: Doug says Sunshine Village could use a butter tart kiosk at the top of Delirium Dive.",
+            "Status Report: Doug’s snowboard escape idea was rejected. Nurses cited ‘risk management issues.’",
+            "Status Report: Doug mentally snowboarded through Canmore’s backcountry today. Physically? Hallways.",
+            "Status Report: Doug’s staples are holding tighter than his bindings on a double black diamond.",
+            "Status Report: Doug ranked hallway laps as a solid blue run—challenging, but achievable.",
 
-            // Doug’s Escape Plans
-            "Status Report: Doug joked about escaping with Pepper as his co-pilot once she joins him in Edmonton.",
-            "Status Report: Doug’s escape plan involves a snowcat and a secret butter tart stash.",
-            "Status Report: Doug is designing a butter tart-powered escape rocket. Results: pending.",
-            "Status Report: Doug joked about using his hospital bed as a golf cart for a sneaky getaway.",
-
-            // Hobbies: Snowboarding and Adventure
-            "Status Report: Doug dreams of carving escape routes through Sunshine Village powder.",
-            "Status Report: Doug compared physiotherapy to Delirium Dive: steep, technical, and worth it.",
-            "Status Report: Doug’s splitboard escape route features a Butter Tart Rest Stop at every checkpoint.",
-            "Status Report: Doug’s heli-ski escape plan includes Pepper as a navigator and Nancy as the planner.",
-
-            // Recovery and Medical
-            "Status Report: Doug’s anti-rejection meds are outperforming his old engineering blueprints.",
-            "Status Report: Doug’s staples are holding tighter than Sunshine Village lift lines during a powder day.",
-            "Status Report: Doug rated today’s pudding as tolerable but still below butter tart standards.",
-            "Status Report: Doug’s diuretics are working harder than a frac pump on a 24-hour cycle.",
+            // Canadian Themes
+            "Status Report: Doug says hallway laps are the cardio equivalent of shoveling snow in a chinook.",
+            "Status Report: Doug is mentally hiking through Banff while nurses remind him it’s still hallway-only.",
+            "Status Report: Doug declared butter tarts more Canadian than maple syrup. Nancy is debating it.",
+            "Status Report: Doug compared hospital spaghetti to a CFL fumble—messy, avoidable, and disappointing.",
+            "Status Report: Doug dreams of walking Canmore’s trails with Nancy and an entire box of butter tarts.",
+            "Status Report: Doug says physiotherapy feels like a slow-motion Tim Hortons lineup.",
+            "Status Report: Doug’s staples are now honorary members of Team Canada for their reliability.",
+            "Status Report: Doug compared hallway laps to surviving a February ice storm—slow but steady.",
+            "Status Report: Doug’s appetite is filing for butter tart citizenship. Approval is expected shortly.",
+            "Status Report: Doug says Canadian winters are easier to survive than hospital spaghetti night.",
 
             // Random Fun
-            "Status Report: Doug is brainstorming a butter tart delivery service with drones and Pepper as CEO.",
-            "Status Report: Doug compared hallway laps to snowcat races: slow, methodical, but oddly satisfying.",
-            "Status Report: Doug’s appetite recovery plan includes butter tarts, ice cream, and zero spaghetti.",
-            "Status Report: Doug is mentally redesigning his physiotherapy plan to include butter tart incentives."
+            "Status Report: Doug’s liver is working so hard it requested a motivational pep talk from Nancy.",
+            "Status Report: Doug says hospital pudding tastes like an unfinished engineering prototype.",
+            "Status Report: Doug is imagining the hospital walls as backcountry splitboard routes. Avalanche risk: low.",
+            "Status Report: Doug is lobbying for butter tarts as official physiotherapy incentives.",
+            "Status Report: Doug joked about installing a ski lift in the hospital halls. Approval pending.",
+            "Status Report: Doug compared spaghetti night to rig downtime: everyone regrets it.",
+            "Status Report: Doug is testing his IV pole as a stand-in for a splitboard pole. Results: inconclusive.",
+            "Status Report: Doug’s appetite set a firm ‘no spaghetti’ policy with butter tart amendments.",
+            "Status Report: Doug compared hallway laps to an engineering drill: slow progress, steady results.",
+            "Status Report: Doug says hydration goals are important, but so are butter tarts."
         ];
-
-        // Dynamically expand responses to 1000 unique entries
-        for (let i = responses.length; i < 1000; i++) {
-            responses.push(`Status Report: Doug is currently brainstorming something unexpected. Stay tuned for updates (${i + 1}).`);
-        }
 
         let usedResponses = [];
         let lastResponse = "";
 
         function generateAnswer() {
             if (responses.length === 0) {
-                responses = [...usedResponses]; // Refill the pool
+                responses = [...usedResponses];
                 usedResponses = [];
             }
 
